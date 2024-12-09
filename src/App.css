@@ -1,0 +1,345 @@
+/* Main App styling */
+.App {
+  min-height: 1000vh;
+  background-color: #0a0c12;
+  text-align: center;
+}
+
+.letter {
+  text-align: center;
+  padding-bottom: 1vh;
+  color: rgb(255, 255, 255);
+  background-color: #0a0c12;
+  font-size: calc(1.7rem + 2vw); /* Makes the font size responsive */
+  animation: colorChange 1s forwards;
+  letter-spacing: 6px; 
+  opacity: 0;
+  animation-delay: 5s; 
+  animation: fadeIn 0.5s ease forwards, colorChange 1s ease forwards; /* Combine fadeIn and colorChange */
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  background-color: #0a0c12; 
+}
+
+.profile-image {
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;
+  object-fit: cover;
+  border-style: solid;
+  border-width: 2px;
+  animation: pulseGlow 2s infinite alternate, fadeIn 3s;
+}
+
+  @keyframes pulseGlow {
+    0% {
+      box-shadow: 0 0 5px 0 #98ff98, 0 0 10px 0 #98ff98, 0 0 15px 0 #98ff98;
+    }
+    50% {
+      box-shadow: 0 0 10px 5px #98ff98, 0 0 15px 10px #98ff98, 0 0 20px 15px #98ff98;
+    }
+    100% {
+      box-shadow: 0 0 5px 0 #98ff98, 0 0 10px 0 #98ff98, 0 0 15px 0 #98ff98;
+    }
+  }
+
+.job-title {
+  text-align: center;
+  font-size: 1.1rem;
+  animation: fadeIn 4s;
+  text-decoration: underline;
+  text-decoration-color: #00c9a7;
+}
+
+.bio {
+  text-align: center;
+  font-size: 1rem; 
+  font-family: "Martian Mono", monospace;
+  color: white;
+  animation: fadeIn 5s; 
+  line-height: 1.5;
+  padding-bottom: 20vh;
+}
+
+.button-c {
+  padding-top: 10vh;
+}
+
+.web-button {
+  padding: 10px 10px; 
+  background-color: #1f2228; 
+  color: white; 
+  border: none; 
+  border-radius: 50px; 
+  font-size: 1rem; 
+  font-family: "Martian Mono", monospace; 
+  cursor: pointer;
+  transition: all 0.3s ease; 
+  box-shadow: 0 0 5px 0 #98ff98, 0 0 10px 0 #98ff98, 0 0 15px 0 #98ff98; 
+  width: auto; 
+  text-align: center; 
+}
+
+.web-button:hover {
+  box-shadow: 0 0 10px 5px white, 0 0 15px 10px white, 0 0 20px 15px white; 
+  transform: scale(1.2); 
+}
+
+.web-button:focus {
+  outline: none; 
+}
+
+.cert-title {
+  font-size: 2rem;
+  padding-top: 2vh;
+}
+
+/* Keyframes for fading in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    opacity: 0;
+    color: white; 
+  }
+  100% {
+    opacity: 1;
+    color: #98ff98;
+  }
+}
+
+
+main {
+  background-color: #0a0c12; /* Matches the body background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.App-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color:  #0a0c12;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1%;
+  z-index: 1000;
+  border-style: solid;
+  border-width: 1px;
+  animation: pulseGlow 4s infinite alternate, fadeIn 3s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.nav-link:hover {
+  color: #61dafb;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #444;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 8px 16px;
+}
+
+.dropdown-content a:hover {
+  background-color: #555;
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Adjustments for content under header */
+main {
+  margin-top: 60px; /* Offset for the fixed header height */
+  padding: 20px;
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 1.2rem; /* Slightly larger font for tablets */
+  }
+  .App-header {
+    height: 70px; /* Larger header for wider screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.5rem; /* Even larger font for laptops */
+  }
+  .App-header {
+    height: 80px;
+    padding-left: 2%;
+  }
+  .dropdown-content {
+    min-width: 200px; /* Adjust dropdown size for larger screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-family: "Arial", sans-serif; /* Clean, simple font */
+    background-color: #1a1a2e; /* Dark theme with a subtle tone */
+    color: #eaeaea; /* Light text for contrast */
+    margin: 0;
+    padding: 0;
+  }
+
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Take the full screen */
+    max-width: 1400px; /* Centered content container */
+    margin: 0 auto;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Gradient background for the app */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for the app container */
+  }
+
+  .App-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 40px;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent header */
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #98ff98; /* Soft green for links */
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-link:hover {
+    color: #00c9a7; /* Brighter green on hover */
+    transform: scale(1.1); /* Subtle hover animation */
+  }
+
+  .main-content {
+    text-align: center;
+    margin-top: 150px; /* Offset to avoid overlap with header */
+  }
+
+  .main-title {
+    font-size: 3rem; /* Large title font */
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: #fff;
+  }
+
+  .bio {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.8); /* Softer text color */
+  }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 30px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff6f61; /* Vibrant accent color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+
+  .button:hover {
+    background-color: #d9534f;
+    transform: scale(1.1);
+  }
+}

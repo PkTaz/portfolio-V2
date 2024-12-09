@@ -1,0 +1,109 @@
+.container {
+    position: relative;
+    top: -80px;
+    transform: skewY(-20deg); /* Skewing only the cube itself */
+    animation: animate 5s linear infinite;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -40%); /* Center the spotlight directly behind the cube */
+      width: 300px; /* Size of the spotlight */
+      height: 300px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+      border-radius: 70%; /* Shape of the spotlight */
+      filter: blur(30px);
+      z-index: 0; /* Ensure it stays behind the cube */
+      animation: fadeGlow 5s ease-in-out infinite;
+    }
+  
+    .cube {
+      position: relative;
+      z-index: 2;
+  
+      &:nth-child(2) {
+        z-index: 1;
+        translate: -30px -30px; 
+      }
+  
+      &:nth-child(3) {
+        z-index: 3;
+        translate: 30px 30px; 
+      }
+  
+      div {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 8px; 
+        translate: calc(-40px * var(--x)) calc(-30px * var(--y)); 
+        
+        span {
+          position: relative;
+          display: inline-block;
+          width: 30px;  
+          height: 30px; 
+          background: #dcdcdc;
+          z-index: calc(1 * var(--i));
+          transition: 5.0s;
+          
+          &:hover {
+            transition: 0s;
+            background: #ef4149;
+            filter: drop-shadow(0 0 30px #ef4149);
+            
+            &:before, 
+            &:after {
+              transition: -5s;
+              background: #ef4149;
+            }
+          }
+          
+          &:before {
+            content: "";
+            position: absolute;
+            left: -20px; 
+            width: 20px; 
+            height: 100%;
+            background: #fff;
+            transform-origin: right;
+            transform: skewY(45deg);
+            transition: 3.5s;
+          }
+          
+          &:after {
+            content: "";
+            position: absolute;
+            top: -20px; 
+            left: 0px;
+            width: 100%;
+            height: 20px; 
+            background: #f2f2f2;
+            transform-origin: bottom;
+            transform: skewX(45deg);
+            transition: 2.5s;
+          }
+        }
+      }
+    }
+  }
+  
+  @keyframes glow {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
+  }
+  
+  @keyframes animate {
+      0% {
+          filter: hue-rotate(0deg);
+      }
+      100% {
+          filter: hue-rotate(360deg);
+      }
+  }
