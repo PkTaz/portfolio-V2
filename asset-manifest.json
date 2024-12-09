@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/https.pktaz.github.io/react-gh-pages/static/css/main.7483c6e7.css",
+    "main.js": "/https.pktaz.github.io/react-gh-pages/static/js/main.1c652234.js",
+    "static/js/488.2f586731.chunk.js": "/https.pktaz.github.io/react-gh-pages/static/js/488.2f586731.chunk.js",
+    "index.html": "/https.pktaz.github.io/react-gh-pages/index.html",
+    "main.7483c6e7.css.map": "/https.pktaz.github.io/react-gh-pages/static/css/main.7483c6e7.css.map",
+    "main.1c652234.js.map": "/https.pktaz.github.io/react-gh-pages/static/js/main.1c652234.js.map",
+    "488.2f586731.chunk.js.map": "/https.pktaz.github.io/react-gh-pages/static/js/488.2f586731.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7483c6e7.css",
+    "static/js/main.1c652234.js"
+  ]
+}
