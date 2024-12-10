@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './App.css';
 import Cube from './Cube';
 import ImageGrid from './ImageGrid';
+import Lcards from './Languages.jsx';
+import Projects from './Projects.jsx';
 
 
 function App() {
@@ -28,19 +30,21 @@ function App() {
           </button>
           {isDropdownOpen && (
             <div className="dropdown-content">
-              <a href="#portfolio">Portfolio</a>
-              <a href="#contact">Contact</a>
-              <a href="#skills">Skills</a>
+              <a href="#projects">-Projects-</a>
+              <a href="#certifications">-Certifications-</a>
+              <a href="#contact">-Contact-</a>
+              <a href="#skills">-Skills-</a>
             </div>
           )}
         </div>      
       </header>
       <main>
+      <h2 className="greeting">Hello there!👋 I am</h2>
       <h1 className="letter">{letters}</h1>
       <div className = "image-wrapper">
-      <img src= './assets/profilep.jpeg' alt="Profile" className="profile-image" />
+      <img src={`${process.env.PUBLIC_URL}/assets/profile-p.jpeg`} alt="Profile1" className="profile-image" />
       </div>
-      <h2 className="job-title">Front-End Developer + Software Engineer</h2>
+      <h2 className="job-title"><em><span>Front-End Developer</span><br /><br /><span>Software Engineer</span></em></h2>
       <p className="bio">I’m deeply passionate about using technology to drive meaningful change. 
         With a strong focus on understanding the needs of customers, I work to create solutions 
         that not only address their immediate challenges but also anticipate future needs. 
@@ -50,10 +54,13 @@ function App() {
         I strive to build systems that truly resonate and add value to those who use them.</p>
         <Cube />
         <div className="button-c">
-        <a href="./assets/WillChapman-R.pdf" target="_blank" class="web-button">View Resume</a>
+        <a href="./assets/WillChapman-R.pdf" target="_blank" className="web-button">View Resume</a>
         </div>
-        <h3 className="cert-title">Certifications</h3>
+        <h3 className="cert-title" id='certifications'>Certifications</h3>
         <ImageGrid />
+        <h4 className="skills" id='skills'>Languages, Libraries,<br /> and Frameworks</h4>
+        <Lcards />
+        <Projects />
       </main>
     </div>
   );

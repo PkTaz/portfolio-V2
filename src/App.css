@@ -3,57 +3,96 @@
   min-height: 1000vh;
   background-color: #0a0c12;
   text-align: center;
+  scroll-behavior: smooth;
+}
+
+.greeting {
+  font-family: "Martian Mono", monospace;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: -1rem; 
+  animation-delay: 4s; 
+  animation: fadeIn 0.5s ease forwards;
 }
 
 .letter {
+  font-family: "Martian Mono", monospace;
   text-align: center;
-  padding-bottom: 1vh;
+  padding-bottom: 3vh;
   color: rgb(255, 255, 255);
   background-color: #0a0c12;
-  font-size: calc(1.7rem + 2vw); /* Makes the font size responsive */
+  font-size: calc(1.75rem + 2vw); 
   animation: colorChange 1s forwards;
-  letter-spacing: 6px; 
+  letter-spacing: 4px; 
   opacity: 0;
   animation-delay: 5s; 
-  animation: fadeIn 0.5s ease forwards, colorChange 1s ease forwards; /* Combine fadeIn and colorChange */
+  animation: fadeIn 0.5s ease forwards, colorChange 1s ease forwards; 
 }
 
 .image-wrapper {
   display: flex;
   justify-content: center; 
   align-items: center;    
-  background-color: #0a0c12; 
+  background-color: #0a0c12;
+  padding-top: 1vh; 
 }
 
 .profile-image {
-  width: 40vw;
-  height: 40vw;
+  width: 60vw;
+  height: 60vw;
   border-radius: 50%;
   object-fit: cover;
   border-style: solid;
   border-width: 2px;
-  animation: pulseGlow 2s infinite alternate, fadeIn 3s;
+  animation: pulseGlow 8s infinite alternate, fadeIn 3s;
+  z-index: 9999;
 }
 
   @keyframes pulseGlow {
     0% {
-      box-shadow: 0 0 5px 0 #98ff98, 0 0 10px 0 #98ff98, 0 0 15px 0 #98ff98;
+      box-shadow: 0 0 2px 0 #98ff98, 0 0 4px 0 #98ff98, 0 0 12px 0 #98ff98;
+    }
+    25% {
+      box-shadow: 0 0 2px 5px #98ff98, 0 0 4px 10px #98ff98, 0 0 20px 8px #98ff98;
     }
     50% {
-      box-shadow: 0 0 10px 5px #98ff98, 0 0 15px 10px #98ff98, 0 0 20px 15px #98ff98;
-    }
-    100% {
-      box-shadow: 0 0 5px 0 #98ff98, 0 0 10px 0 #98ff98, 0 0 15px 0 #98ff98;
+      box-shadow: 0 0 2px 0 #98ff98, 0 0 4px 0 #98ff98, 0 0 8px 0 #98ff98;
     }
   }
 
-.job-title {
-  text-align: center;
-  font-size: 1.1rem;
-  animation: fadeIn 4s;
-  text-decoration: underline;
-  text-decoration-color: #00c9a7;
-}
+
+  @keyframes rotateTextColor {
+    0% {
+      color: white;
+    }
+    50% {
+      color: #98ff98; /* green */
+    }
+    100% {
+      color: white;
+    }
+  }
+  
+  .job-title {
+    text-align: center;
+    font-size: 1.5rem;
+    animation: fadeIn 4s, rotateTextColor 3s linear infinite; /* Combined animations */
+    text-decoration-color: #98ff98;
+    font-family: "Martian Mono", monospace;
+    line-height: 0.5;
+    padding: 7px;
+  }
+  
+  .job-title span {
+    display: block;
+    animation: rotateTextColor 1s linear infinite; /* Each word gets its own animation */
+  }
+  
+  .job-title span:nth-child(1) {
+    animation-delay: 1.5s; /* Delay for the top part */
+  }
+  
+  
 
 .bio {
   text-align: center;
@@ -66,26 +105,28 @@
 }
 
 .button-c {
-  padding-top: 10vh;
+  padding-top: 15vh;
+  padding-bottom: 5vh;
 }
 
 .web-button {
   padding: 10px 10px; 
   background-color: #1f2228; 
-  color: white; 
+  color: #98ff98; 
   border: none; 
   border-radius: 50px; 
   font-size: 1rem; 
   font-family: "Martian Mono", monospace; 
   cursor: pointer;
   transition: all 0.3s ease; 
-  box-shadow: 0 0 5px 0 #98ff98, 0 0 10px 0 #98ff98, 0 0 15px 0 #98ff98; 
+  box-shadow: 0 0 6px 0 #98ff98, 0 0 12px 0 #98ff98, 0 0 15px 0 #98ff98; 
   width: auto; 
   text-align: center; 
+  text-decoration: none;
 }
 
 .web-button:hover {
-  box-shadow: 0 0 10px 5px white, 0 0 15px 10px white, 0 0 20px 15px white; 
+  box-shadow: 0 0 15px 5px white, 0 0 15px 10px white, 0 0 20px 15px white; 
   transform: scale(1.2); 
 }
 
@@ -95,9 +136,16 @@
 
 .cert-title {
   font-size: 2rem;
-  padding-top: 2vh;
+  padding-top: 1vh;
+  color: #98ff98;
 }
 
+.skills {
+  font-family: "Martian Mono", monospace;
+  font-size: 2rem;
+  padding-top: 2vh;
+  color: #98ff98;
+}
 /* Keyframes for fading in */
 @keyframes fadeIn {
   from {
@@ -152,7 +200,7 @@ main {
   width: 100%;
   height: 60px;
   background-color:  #0a0c12;
-  color: #fff;
+  color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -160,7 +208,8 @@ main {
   z-index: 1000;
   border-style: solid;
   border-width: 1px;
-  animation: pulseGlow 4s infinite alternate, fadeIn 3s;
+  border-bottom-right-radius: 5px;
+  animation: pulseGlow 4s infinite alternate;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -174,7 +223,7 @@ nav {
 .nav-link {
   text-decoration: none;
   color: #fff;
-  font-size: 18px;
+  font-size: 1.5rem;
 }
 
 .nav-link:hover {
@@ -187,10 +236,11 @@ nav {
 }
 
 .dropdown-button {
+  padding-right: 2vh;
   background: none;
   border: none;
   color: #fff;
-  font-size: 24px;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 

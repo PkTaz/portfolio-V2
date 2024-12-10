@@ -1,8 +1,8 @@
 .container {
     position: relative;
-    top: -80px;
+    top: -60px;
     transform: skewY(-20deg); /* Skewing only the cube itself */
-    animation: animate 5s linear infinite;
+    animation: animate 6s linear infinite, fadeIn 5s;
   
     &::before {
       content: "";
