@@ -1,19 +1,14 @@
-import React, { useState } from 'react';
 import './App.css';
 import Cube from './Cube';
 import ImageGrid from './ImageGrid';
 import Lcards from './Languages.jsx';
 import Projects from './Projects.jsx';
-
+import Menu from './Menu.jsx';
+import Contact from './Contact.jsx';
+import Footer from './Footer.jsx';
 
 function App() {
   const name = "William Chapman";
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setIsDropdownOpen((prev) => !prev);
-  };
-
   const letters = name.split("").map((letter, index) => (
     <span key={index} className="letter" style={{ animationDelay: `${index * 0.1}s` }}>
       {letter === " " ? "\u00A0" : letter}
@@ -24,19 +19,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <a href="#home" className="nav-link">Home</a>
-        <div className="dropdown">
-          <button className="dropdown-button" onClick={toggleDropdown}>
-            ☰
-          </button>
-          {isDropdownOpen && (
-            <div className="dropdown-content">
-              <a href="#projects">-Projects-</a>
-              <a href="#certifications">-Certifications-</a>
-              <a href="#contact">-Contact-</a>
-              <a href="#skills">-Skills-</a>
-            </div>
-          )}
-        </div>      
+        <Menu />
       </header>
       <main>
       <h2 className="greeting">Hello there!👋 I am</h2>
@@ -61,6 +44,8 @@ function App() {
         <h4 className="skills" id='skills'>Languages, Libraries,<br /> and Frameworks</h4>
         <Lcards />
         <Projects />
+        <Contact />
+        <Footer />
       </main>
     </div>
   );

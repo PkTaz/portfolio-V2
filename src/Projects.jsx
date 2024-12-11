@@ -126,7 +126,7 @@ const Projects = () => (
 </section>
     <img src={`${process.env.PUBLIC_URL}/assets/project3.gif`} alt="Project 1" className="project1"/>
         <div className="button-b">
-            <a href="https://pktaz.github.io/Contracting-Company/" target="_blank" className="web-button">View Design</a>
+            <a href="https://pktaz.github.io/Countries-of-The-World/" target="_blank" className="web-button">View Application</a>
             </div>
             <section id="project-details">
   <table className="project-table">

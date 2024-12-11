@@ -1,6 +1,6 @@
 /* Main App styling */
 .App {
-  min-height: 1000vh;
+  min-height: 700vh;
   background-color: #0a0c12;
   text-align: center;
   scroll-behavior: smooth;
@@ -45,7 +45,6 @@
   border-style: solid;
   border-width: 2px;
   animation: pulseGlow 8s infinite alternate, fadeIn 3s;
-  z-index: 9999;
 }
 
   @keyframes pulseGlow {
@@ -76,7 +75,7 @@
   .job-title {
     text-align: center;
     font-size: 1.5rem;
-    animation: fadeIn 4s, rotateTextColor 3s linear infinite; /* Combined animations */
+    animation: fadeIn 4s, rotateTextColor 3s linear infinite;
     text-decoration-color: #98ff98;
     font-family: "Martian Mono", monospace;
     line-height: 0.5;
@@ -85,15 +84,13 @@
   
   .job-title span {
     display: block;
-    animation: rotateTextColor 1s linear infinite; /* Each word gets its own animation */
+    animation: rotateTextColor 1s linear infinite; 
   }
   
   .job-title span:nth-child(1) {
-    animation-delay: 1.5s; /* Delay for the top part */
+    animation-delay: 1.5s; 
   }
   
-  
-
 .bio {
   text-align: center;
   font-size: 1rem; 
@@ -230,47 +227,6 @@ nav {
   color: #61dafb;
 }
 
-/* Dropdown Styles */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-button {
-  padding-right: 2vh;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 100%;
-  background-color: #444;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  padding: 10px 0;
-  min-width: 150px;
-  z-index: 1000;
-}
-
-.dropdown-content a {
-  color: #fff;
-  text-decoration: none;
-  display: block;
-  padding: 8px 16px;
-}
-
-.dropdown-content a:hover {
-  background-color: #555;
-}
-
-/* Show dropdown content on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
 
 /* Adjustments for content under header */
 main {
