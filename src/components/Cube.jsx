@@ -1,4 +1,4 @@
-import './Cube.css'
+import '../styles/Cube.css'
 
 const Cube = () => (
     <div className="container">

@@ -1,11 +1,11 @@
 import './App.css';
-import Cube from './Cube';
-import ImageGrid from './ImageGrid';
-import Lcards from './Languages.jsx';
-import Projects from './Projects.jsx';
-import Menu from './Menu.jsx';
-import Contact from './Contact.jsx';
-import Footer from './Footer.jsx';
+import Cube from './components/Cube.jsx';
+import ImageGrid from './components/ImageGrid.jsx';
+import Lcards from './components/Languages.jsx';
+import Projects from './components/Projects.jsx';
+import Menu from './components/Menu.jsx';
+import Contact from './components/Contact.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
   const name = "William Chapman";

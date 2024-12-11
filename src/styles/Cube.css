@@ -1,7 +1,7 @@
 .container {
     position: relative;
     top: -60px;
-    transform: skewY(-20deg); /* Skewing only the cube itself */
+    transform: skewY(-20deg);
     animation: animate 6s linear infinite, fadeIn 5s;
   
     &::before {
@@ -9,13 +9,13 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -40%); /* Center the spotlight directly behind the cube */
-      width: 300px; /* Size of the spotlight */
+      transform: translate(-50%, -40%); 
+      width: 300px; 
       height: 300px;
       background: radial-gradient(circle, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
-      border-radius: 70%; /* Shape of the spotlight */
+      border-radius: 70%; 
       filter: blur(30px);
-      z-index: 0; /* Ensure it stays behind the cube */
+      z-index: 0; 
       animation: fadeGlow 5s ease-in-out infinite;
     }
   

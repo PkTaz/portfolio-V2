@@ -1,3 +1,7 @@
+.contactHeader {
+  color: #98ff98;
+}
+
 .card2 {
     background-color: #1f2228; 
     height: 350px;
@@ -8,8 +12,8 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
     margin: 12% auto; 
-    font-family: "Martian Mono";
-    z-index: 2;
+    font-family: "Martian Mono" monospace;
+    z-index: 5;
 }
 
 .card2:hover {

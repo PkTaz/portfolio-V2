@@ -1,7 +1,9 @@
-import './Contact.css';
+import '../styles/Contact.css';
 
 const Contact = () => {
     return (
+  <div>
+    <h1 className="contactHeader">Contact Me</h1>
   <div id="contact" className="card2">
   <div className="card-content2">
     <div className="profile-section2">
@@ -37,7 +39,7 @@ const Contact = () => {
   <div>T</div>
 </div>
 </div>
-
+</div>
     );
 };
 
